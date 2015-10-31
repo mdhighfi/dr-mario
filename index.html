@@ -1,16 +1,30 @@
 <html>
   <head>
     <title>Dr. Mario</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/canvas.css">
   </head>
 
   <body>
     <canvas></canvas>
 
     <script type="application/javascript" src="vendor/keymaster.js"></script>
+    <script type="application/javascript" src="lib/constants.js"></script>
 
     <script type="application/javascript">
       (function () {
         var canvasEl = document.getElementsByTagName("canvas")[0];
+        var ctx = canvasEl.getContext('2d');
+        canvasEl.width = Mario.Constants.CANVAS_WIDTH;
+        canvasEl.height = Mario.Constants.CANVAS_HEIGHT;
+        canvasEl.background = "#ccc";
+
+        ctx.fillStyle = "rgb(200,0,0)";
+        ctx.fillRect (10, 10, 55, 50);
+
+        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+        ctx.fillRect (30, 30, 55, 50);
+
+
       })();
     </script>
   </body>
