@@ -18,11 +18,13 @@
         canvasEl.height = Mario.Constants.CANVAS_HEIGHT;
         canvasEl.background = "#ccc";
 
-        ctx.fillStyle = "rgb(200,0,0)";
-        ctx.fillRect (10, 10, 55, 50);
+        var length = Mario.Constants.SQUARE_LENGTH
 
-        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-        ctx.fillRect (30, 30, 55, 50);
+        ctx.fillStyle = "rgb(200,0,0)";
+        ctx.fillRect (2*length, 5*length, length, length);
+
+        ctx.fillStyle = "rgb(0, 0, 200)";
+        ctx.fillRect (3*length, 5*length, length, length);
 
 
       })();
