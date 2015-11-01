@@ -9,6 +9,8 @@
 
     <script type="application/javascript" src="vendor/keymaster.js"></script>
     <script type="application/javascript" src="lib/constants.js"></script>
+    <script type="application/javascript" src="lib/game.js"></script>
+    <script type="application/javascript" src="lib/gameView.js"></script>
 
     <script type="application/javascript">
       (function () {
@@ -26,6 +28,8 @@
         ctx.fillStyle = "rgb(0, 0, 200)";
         ctx.fillRect (3*length, 5*length, length, length);
 
+        var game = new Mario.Game();
+        new Mario.GameView(game, ctx).start();
 
       })();
     </script>
