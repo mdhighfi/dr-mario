@@ -15,16 +15,16 @@
     <script type="application/javascript" src="lib/coloredObject.js"></script>
     <script type="application/javascript" src="lib/pill.js"></script>
     <script type="application/javascript" src="lib/half.js"></script>
+    <script type="application/javascript" src="lib/virus.js"></script>
 
     <script type="application/javascript">
+      var drMarioSprites = new Image();
       (function () {
         var canvasEl = document.getElementsByTagName("canvas")[0];
         var ctx = canvasEl.getContext('2d');
         canvasEl.width = Mario.Constants.CANVAS_WIDTH;
         canvasEl.height = Mario.Constants.CANVAS_HEIGHT;
         canvasEl.background = "#ccc";
-
-        var drMarioSprites = new Image();
         drMarioSprites.onload = function(){
           var game = new Mario.Game();
           new Mario.GameView(game, ctx).start();
