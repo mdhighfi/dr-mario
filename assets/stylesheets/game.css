@@ -1,0 +1,18 @@
+div.background-div {
+  background: url('../images/mario.jpg');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+div.canvas {
+  padding-top: 20vh;
+  text-align: center;
+}
