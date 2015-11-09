@@ -12,6 +12,7 @@
     <script type="application/javascript" src="lib/constants.js"></script>
     <script type="application/javascript" src="lib/game.js"></script>
     <script type="application/javascript" src="lib/gameView.js"></script>
+    <script type="application/javascript" src="lib/coloredObject.js"></script>
     <script type="application/javascript" src="lib/pill.js"></script>
     <script type="application/javascript" src="lib/half.js"></script>
 
@@ -23,9 +24,12 @@
         canvasEl.height = Mario.Constants.CANVAS_HEIGHT;
         canvasEl.background = "#ccc";
 
-        var game = new Mario.Game();
-        new Mario.GameView(game, ctx).start();
-
+        var drMarioSprites = new Image();
+        drMarioSprites.onload = function(){
+          var game = new Mario.Game();
+          new Mario.GameView(game, ctx).start();
+        }
+        drMarioSprites.src = "assets/images/drmario_sprites.png";
       })();
     </script>
   </body>
