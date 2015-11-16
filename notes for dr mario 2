@@ -1,0 +1,12 @@
+What is the purpose of pillIsLanded?
+How often is it called?
+
+currentPill pos? is that on the small grid or on the big grid of pixels?
+
+Should I be keeping track of grid pos as an attribute or just calculating it every time?
+
+Optimization: only check for stopping if it reaches a grid position
+
+if changeInGridPos
+if landed()
+check pillLandedOn(object) for each object
