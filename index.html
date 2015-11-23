@@ -18,6 +18,8 @@
     <script type="application/javascript" src="lib/coloredObject.js"></script>
     <script type="application/javascript" src="lib/pill.js"></script>
     <script type="application/javascript" src="lib/virus.js"></script>
+    <script type="application/javascript" src="lib/curtain.js"></script>
+    <script type="application/javascript" src="lib/messageScreen.js"></script>
 
     <script type="application/javascript">
       var drMarioSprites = new Image();
@@ -28,7 +30,12 @@
         canvasEl.height = Mario.Constants.CANVAS_HEIGHT;
         canvasEl.background = "#ccc";
         drMarioSprites.onload = function(){
-          new Mario.GameView(ctx).start();
+          // new Mario.GameView(ctx).start();
+          var curtain = new Mario.Curtain();
+          var message = new Mario.MessageScreen();
+
+          curtain.draw(ctx)
+          message.draw(ctx)
         }
         drMarioSprites.src = "assets/images/drmario_sprites.png";
       })();
