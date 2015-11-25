@@ -30,7 +30,7 @@
         canvasEl.height = Mario.Constants.CANVAS_HEIGHT;
         canvasEl.background = "#ccc";
         drMarioSprites.onload = function(){
-          new Mario.GameView(ctx).start();
+          new Mario.GameView(ctx);
         }
         drMarioSprites.src = "assets/images/drmario_sprites.png";
       })();
